@@ -2,7 +2,8 @@
     "name": "Astrohero 1",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "animation": "*"
     },
     "files": [
         "main.blocks",
