@@ -1,5 +1,6 @@
 namespace SpriteKind {
     export const coin = SpriteKind.create()
+    export const TrueCoin = SpriteKind.create()
 }
 function start_level () {
     if (current_level == 0) {
@@ -22,7 +23,7 @@ function start_level () {
             22222222222222222222222222222222222
             `, [myTiles.transparency16,myTiles.tile2,myTiles.tile7,myTiles.tile3,myTiles.tile8,myTiles.tile9,myTiles.tile4,myTiles.tile6,myTiles.tile16], TileScale.Sixteen))
     } else if (current_level == 1) {
-        tiles.setTilemap(tiles.createTilemap(hex`2300100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000c0002000000000000000004000000000004040000000000000000040404000000000501010101010600000007010101060000070101010600000000070101010101010101010a0a0a0a0a080b0b0b090a0a0a080b0b090a0a0a080b0b0b0b090a0a0a0a0a0a0a0a0a`, img`
+        tiles.setTilemap(tiles.createTilemap(hex`230010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d0000000000000000000000000000000000000000000000000000000000000000000003000000000000000d00000000000000000000000d0000000c0002000d00000000000004000d00000004040d0000000000000d040404000d00000501010101010600000007010101060000070101010600000000070101010101010101010a0a0a0a0a080b0b0b090a0a0a080b0b090a0a0a080b0b0b0b090a0a0a0a0a0a0a0a0a`, img`
             ...................................
             ...................................
             ...................................
@@ -39,21 +40,40 @@ function start_level () {
             ..2........2.....22........222.....
             222222...22222..22222....2222222222
             ...................................
-            `, [myTiles.transparency16,myTiles.tile7,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile8,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile9], TileScale.Sixteen))
+            `, [myTiles.transparency16,myTiles.tile7,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile8,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile9,myTiles.tile16], TileScale.Sixteen))
+    } else if (current_level == 2) {
+        tiles.setTilemap(tiles.createTilemap(hex`230010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e000000000000000000000e0000000000000000000000000e000000000000000e0000010000000000000e0e00000100000000000000000c0d00000100000000000e0f0b0a00020000000000000f0a00000200000e0000000e0f0b03030303030304000005030303030303040000050303030303030303040000050303030808080808080609090708080808080806090907080808080808080806090907080808`, img`
+            ...................................
+            ...................................
+            ...................................
+            ...................................
+            ...................................
+            ...................................
+            ...................................
+            ...................................
+            ...................................
+            ...................................
+            ...................................
+            ...................................
+            ..............2..........2.........
+            ...2......222.2......22..2.......22
+            2222222..22222222..2222222222..2222
+            ......2..2......2..2........2..2...
+            `, [myTiles.transparency16,myTiles.tile2,myTiles.tile3,myTiles.tile7,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile4,myTiles.tile5,myTiles.tile8,myTiles.tile9,myTiles.tile16,myTiles.tile17], TileScale.Sixteen))
     } else {
         game.over(true, effects.confetti)
     }
+    for (let value of sprites.allOfKind(SpriteKind.TrueCoin)) {
+        TrueCoin1.destroy()
+    }
     scene.cameraFollowSprite(Astro_Hero)
     tiles.placeOnRandomTile(Astro_Hero, myTiles.tile9)
-    for (let value of tiles.getTilesByType(myTiles.tile9)) {
-        tiles.setTileAt(value, myTiles.transparency16)
+    for (let Value2 of tiles.getTilesByType(myTiles.tile9)) {
+        tiles.setTileAt(Value2, myTiles.transparency16)
     }
     Astro_Hero.ay = 200
-    for (let value of sprites.allOfKind(SpriteKind.coin)) {
-        value.destroy()
-    }
-    for (let value of tiles.getTilesByType(myTiles.tile16)) {
-        coin = sprites.create(img`
+    for (let variable1 of tiles.getTilesByType(myTiles.tile16)) {
+        TrueCoin1 = sprites.create(img`
             . . . . . . . . . . . . . . . . 
             . . . . c c c c c c c . . . . . 
             . . . c 5 5 5 5 5 5 5 c . . . . 
@@ -70,9 +90,9 @@ function start_level () {
             . . . . c c c c c c c . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
-            `, SpriteKind.Player)
+            `, SpriteKind.TrueCoin)
         animation.runImageAnimation(
-        coin,
+        TrueCoin1,
         [img`
             . . . . . . . . . . . . . . . . 
             . . . . . c c c c c c . . . . . 
@@ -230,6 +250,8 @@ function start_level () {
         100,
         true
         )
+        tiles.placeOnTile(TrueCoin1, variable1)
+        tiles.setTileAt(variable1, myTiles.transparency16)
     }
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -244,11 +266,11 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location
     current_level += 1
     start_level()
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.coin, function (sprite, otherSprite) {
+sprites.onOverlap(SpriteKind.Player, SpriteKind.TrueCoin, function (sprite, otherSprite) {
     info.changeScoreBy(1)
-    coin.destroy()
+    otherSprite.destroy()
 })
-let coin: Sprite = null
+let TrueCoin1: Sprite = null
 let Astro_Hero: Sprite = null
 let current_level = 0
 scene.setBackgroundImage(img`
