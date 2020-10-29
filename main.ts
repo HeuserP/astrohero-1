@@ -70,6 +70,9 @@ function start_level () {
     for (let value of sprites.allOfKind(SpriteKind.TrueCoin)) {
         value.destroy()
     }
+    for (let value of sprites.allOfKind(SpriteKind.gas)) {
+        value.destroy()
+    }
     scene.cameraFollowSprite(Astro_Hero)
     tiles.placeOnRandomTile(Astro_Hero, myTiles.tile9)
     for (let Value2 of tiles.getTilesByType(myTiles.tile9)) {
@@ -363,23 +366,6 @@ function start_level () {
             7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
             7 7 7 7 7 5 5 7 7 7 7 7 7 7 7 7 
             7 7 7 7 7 7 5 5 7 7 7 7 7 7 7 7 
-            `,img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
             `],
         250,
         true
